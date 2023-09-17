@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\TweetController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('tweets', [TweetController::class,'index']);
 Route::post('tweets', [TweetController::class,'store']);
+
+Route::get('developer', [DeveloperController::class,'index']);

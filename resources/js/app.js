@@ -16,11 +16,18 @@ import { createApp } from "vue";
 const app = createApp({});
 
 // import ExampleComponent from "./components/ExampleComponent.vue";
+// app.component("example-component", ExampleComponent);
 import TweetComponent from "./components/tweet/Timeline.vue";
 import PostComponent from "./components/tweet/Timeline.vue";
-// app.component("example-component", ExampleComponent);
 app.component("timeline", TweetComponent);
 app.component("post", PostComponent);
+
+import ClientsComponent from "./components/passport/Clients.vue";
+import AuthorizedClientsComponent from "./components/passport/AuthorizedClients.vue";
+import PersonalAccessTokensComponent from "./components/passport/PersonalAccessTokens.vue";
+app.component("passport-clients", ClientsComponent);
+app.component("passport-authorized-clients", AuthorizedClientsComponent);
+app.component("passport-personal-access-tokens", PersonalAccessTokensComponent);
 
 /**
  * The following block of code may be used to automatically register your
